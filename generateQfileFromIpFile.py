@@ -1,7 +1,6 @@
 """
-Unless it is absolutely neccessary do not call any
-function other than writeToFile.
-Always set a key that isn't the default key.
+Unless it is absolutely neccessary do not call any function other than
+writeToFile. Always set a key that isn't the default key.
 """
 
 import json
@@ -37,6 +36,11 @@ def setKey(Pkey):
         return 1
 
 def helper(PifName, PofName, Pmode):
+    """
+    Reads from file. Verifies a records' validity.
+    If it is valid the record is encrypted and written into the output file
+    as json data.
+    """
     Lrecs = open(PifName).readlines()
     fp = open(PofName, Pmode)
     for Li in Lrecs:
@@ -58,6 +62,9 @@ def helper(PifName, PofName, Pmode):
         fp.write(json.dumps(Lrecord) + '\n')
 
 def main():
+    """
+    
+    """
     while True:
         temp = setKey(input("Please enter a valid string to set as key: "))
         if temp == 0:
@@ -76,8 +83,3 @@ def main():
         else:
             print('Please enter a valid mode.')
     helper(LifName, LofName, Lmode)
-##    setKey("pizza")
-##    helper("abc", "randomactsofpizza.txt", "w")
-
-main()
-print('Done')

@@ -1,20 +1,20 @@
 There are two ways to create question sets.
 
-1. generateQfileManually - You are asked to enter the question, options, correct
+1. Set questions manually - You are asked to enter the question, options, correct
 option and score associated with each question. This is a time consuming process
 with quite a few steps for adding each question and shouldn't be used.
 
-2. generateQfilefromIpFile - Enter the question, options, correct option and
-score into a file in the format given below. Then run generateQfilefromIpFile.
+2. Set questions from file - Enter the question, options, correct option and
+score into a file in the format given below. Then select option 3 in simpleStart.
 Set a key to encrypt contents.
 
 When the output file is the same as the input file the existing content will be 
 deleted if opened in 'w' mode. Do not do this unless you are sure that all the 
-records that you have enterred are perfectly fine. Else you will lose the 
-erraneous records.
+records that you have entered are perfectly fine. Else you will lose the 
+erroneous records.
 
 Ideally: Set the output file to be something other than the input file itself.
-Open the output file in mode 'w' first. If there are any erraneous records in the
+Open the output file in mode 'w' first. If there are any erroneous records in the
 input file they will not be written into the output file but will be displayed on
 the screen. Make the necessary changes and then you may write all the questions
 into the output file again in mode 'w'.
@@ -23,9 +23,20 @@ mode 'a' after correcting the errors.
 
 
 Steps to create question set:
-1. Open a new file input.txt.
+1. Open a new file. (eg: input.txt)
 2. Enter records in the format:
 QuesLine1###QuesLine2...###QuesLineN######Op1Line1...###Op1LineN######Op2Line1...###Op2LineN######Op3Line1...###Op3LineN######Op4Line1...###Op4LineN######CorrectAnswer(1-4)######Score######
+3. Open and run simpleStart.py.
+4. Select option 3.
+5. Set a valid key to encrypt contents. (eg: pizza)
+6. Enter the name of the input file. (eg: input.txt)
+7. Enter the name of the output file. (eg: output.txt)
+8. Select mode. 'w', unless you know better.
+9. If there are any errors, make necessary changes in input.txt.
+   DO NOT DELETE the records that have been accepted.
+10. Repeat from step 3.
+11. You're set to go once no error has been shown and you see the prompt. (>>>)
+
 
 ex:
 
@@ -50,8 +61,10 @@ Option 3:
 Option 4:
 None of the above
 
-* There are six #'s (######) seperating different fields.
+NOTE:
+=====
+* There are six #'s (######) seperating different fields of a record.
 * There are three #'s (###) seperating different lines of a given field.
-* Six #'s have to be enterred before ending a line.
+* Six #'s have to be entered before ending a line.
 * All the fields of a record must be present on a single line. Having some fields
   on a different line will lead to an error.

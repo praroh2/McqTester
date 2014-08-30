@@ -1,5 +1,6 @@
 * Although care has been taken to ensure that the test can be resumed if it is
-  stopped halfway through we do not guarantee it.
+  stopped halfway through, there is no guarantee that it will resume all the 
+  time.
 
 * Tampering with the file named after your USN may lead to severe errors and
   you may have to start the test all over again.

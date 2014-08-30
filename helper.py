@@ -44,7 +44,7 @@ def askQ(Precord, Pkey):
     
 def main(Pqs, Pkey, Pusn, Pno):
     """
-
+    
     """
     global Gscore, Gtotal
     

@@ -1,7 +1,6 @@
 """
-Unless it is absolutely neccessary do not call any
-function other than writeToFile.
-Always set a key that isn't the default key.
+This is a very time consuming method. Do not use it for any purpose other than
+testing.
 """
 
 import json
@@ -85,6 +84,9 @@ def writeToFile(Pfile, Pmode = 'a'):
     return 0
 
 def main():
+    """
+    
+    """
     while True:
         temp = setKey(input("Please enter a valid string to set as key: "))
         if temp == 0:
@@ -97,6 +99,3 @@ def main():
         else:
             print('Please enter a valid mode.')
     helper(LofName, Lmode)
-
-main()
-print("Done")

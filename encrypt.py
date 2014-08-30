@@ -1,3 +1,8 @@
+"""
+Implements a modified version of Caesar shift.
+It is not very secure.
+"""
+
 import transformation as tr
 
 def decryptRecord(Precord, Pkey):
