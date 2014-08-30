@@ -1,0 +1,12 @@
+* Open simpleStart.py in Idle and run it (F5).
+
+* Read the instructions carefully.
+
+* Ask for the name of the question set that you have to answer and the key 
+  required to view the contents.
+
+* If you wish to leave the test for any reason, close it (Ctrl + C). You can 
+  continue later. You will not be asked to solve all questions again.
+
+* You need not open or run any piece of code. simpleStart.py is the only file 
+  that you should open.

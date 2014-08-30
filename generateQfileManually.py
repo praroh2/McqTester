@@ -69,16 +69,6 @@ def writeToFile(Pfile, Pmode = 'a'):
     """
     Write records into Pfile as json data.
     """
-
-    if Pmode != 'a' and Pmode != 'w':
-        print('Mode should be \'a\' or \'w\' only')
-        return 1
-    print('\n###############\n')
-    while True:
-        temp = setKey(input("Please enter a valid string to set as key: "))
-        if temp == 0:
-            break
-
     Lcount = 0
     fp = open(Pfile, Pmode)
     while True:
@@ -94,4 +84,19 @@ def writeToFile(Pfile, Pmode = 'a'):
     print(Lcount, "records created")
     return 0
 
-writeToFile('randomactsofpizza', 'w')
+def main():
+    while True:
+        temp = setKey(input("Please enter a valid string to set as key: "))
+        if temp == 0:
+            break
+    LofName = input("Enter the name of the output file: ")
+    while True:
+        Lmode = input("Enter mode (a/w): ")
+        if Lmode == 'a' or Lmode == 'w':
+            break
+        else:
+            print('Please enter a valid mode.')
+    helper(LofName, Lmode)
+
+main()
+print("Done")

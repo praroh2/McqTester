@@ -1,0 +1,6 @@
+* Currently, the keys that are accepted are restricted to any combination of
+  lowercase letters. Using Uppercase letters, digits or special character may
+  crash the application.
+
+* The encryption scheme is not very secure. It is just a modification Caesar 
+  shift.

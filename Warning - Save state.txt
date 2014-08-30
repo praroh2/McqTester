@@ -1,0 +1,5 @@
+* Although care has been taken to ensure that the test can be resumed if it is
+  stopped halfway through we do not guarantee it.
+
+* Tampering with the file named after your USN may lead to severe errors and
+  you may have to start the test all over again.

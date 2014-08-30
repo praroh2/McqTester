@@ -58,26 +58,26 @@ def helper(PifName, PofName, Pmode):
         fp.write(json.dumps(Lrecord) + '\n')
 
 def main():
-##    while True:
-##        temp = setKey(input("Please enter a valid string to set as key: "))
-##        if temp == 0:
-##            break
-##    while True:
-##        LifName = input("Enter the name of the input file: ")
-##        if checkExists(LifName):
-##            break
-##        else:
-##            print('Please check the filename.')
-##    LofName = input("Enter the name of the output file: ")
-##    while True:
-##        Lmode = input("Enter mode (a/w): ")
-##        if Lmode == 'a' or Lmode == 'w':
-##            break
-##        else:
-##            print('Please enter a valid mode.')
-##    helper(LifName, LofName, Lmode)
-    setKey("pizza")
-    helper("abc", "randomactsofpizza.txt", "w")
+    while True:
+        temp = setKey(input("Please enter a valid string to set as key: "))
+        if temp == 0:
+            break
+    while True:
+        LifName = input("Enter the name of the input file: ")
+        if checkExists(LifName):
+            break
+        else:
+            print('Please check the filename.')
+    LofName = input("Enter the name of the output file: ")
+    while True:
+        Lmode = input("Enter mode (a/w): ")
+        if Lmode == 'a' or Lmode == 'w':
+            break
+        else:
+            print('Please enter a valid mode.')
+    helper(LifName, LofName, Lmode)
+##    setKey("pizza")
+##    helper("abc", "randomactsofpizza.txt", "w")
 
 main()
 print('Done')

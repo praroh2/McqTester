@@ -1,0 +1,57 @@
+There are two ways to create question sets.
+
+1. generateQfileManually - You are asked to enter the question, options, correct
+option and score associated with each question. This is a time consuming process
+with quite a few steps for adding each question and shouldn't be used.
+
+2. generateQfilefromIpFile - Enter the question, options, correct option and
+score into a file in the format given below. Then run generateQfilefromIpFile.
+Set a key to encrypt contents.
+
+When the output file is the same as the input file the existing content will be 
+deleted if opened in 'w' mode. Do not do this unless you are sure that all the 
+records that you have enterred are perfectly fine. Else you will lose the 
+erraneous records.
+
+Ideally: Set the output file to be something other than the input file itself.
+Open the output file in mode 'w' first. If there are any erraneous records in the
+input file they will not be written into the output file but will be displayed on
+the screen. Make the necessary changes and then you may write all the questions
+into the output file again in mode 'w'.
+Alternate: Delete the records that have been accepted and write to output file in
+mode 'a' after correcting the errors.
+
+
+Steps to create question set:
+1. Open a new file input.txt.
+2. Enter records in the format:
+QuesLine1###QuesLine2...###QuesLineN######Op1Line1...###Op1LineN######Op2Line1...###Op2LineN######Op3Line1...###Op3LineN######Op4Line1...###Op4LineN######CorrectAnswer(1-4)######Score######
+
+ex:
+
+int i = 3, j = 4;###float k;###k = float(i + j + 1.0);######2######7######    6######None of the above######4######1######
+
+will finally be displayed as:
+
+Question:
+int i = 3, j = 4;
+float k;
+k = float(i + j + 1.0);
+
+Option 1:
+2
+
+Option 2:
+7
+
+Option 3:
+    6
+
+Option 4:
+None of the above
+
+* There are six #'s (######) seperating different fields.
+* There are three #'s (###) seperating different lines of a given field.
+* Six #'s have to be enterred before ending a line.
+* All the fields of a record must be present on a single line. Having some fields
+  on a different line will lead to an error.
