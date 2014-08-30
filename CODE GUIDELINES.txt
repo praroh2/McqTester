@@ -1,0 +1,9 @@
+* Global variables start with a G. ex: Grecord.
+* Local variables start with an L. ex: Lrecord.
+* Function parameters start with a P. ex: Precord.
+* Follow camel case after G/L/P.
+* Exception to the above rule: variable temp, its scope should be restricted to
+  a single loop.
+* Do not add unnecessary functions to existing files.
+* Any new functions should be added to a different file unless it is directly
+  related to functions present in an existing file.
