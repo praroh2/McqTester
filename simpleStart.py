@@ -16,8 +16,8 @@ if __name__ == "__main__":
             print("Goodbye!!!")
             break
         elif Lin == '1':
-            import start
-            start.main()
+            import tester
+            tester.main()
             break
         elif Lin == '2':
             import generateQfileManually
